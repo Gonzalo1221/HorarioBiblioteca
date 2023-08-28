@@ -1,4 +1,3 @@
-
 from flask import Blueprint, request, jsonify, json
 from common.Toke import *
 from config.db import db, app, ma
