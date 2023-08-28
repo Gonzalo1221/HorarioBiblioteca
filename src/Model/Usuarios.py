@@ -24,9 +24,7 @@ class Users(db.Model):
     
     with app.app_context():
             db.create_all()
-  
 
 class UsuariosSchema(ma.Schema):
     class Meta:
-        fields = ('id','nombre', 'correo', 'password',
-                   'sede', 'id_roles')
+        fields = ('id','nombre', 'correo', 'password','sede', 'id_roles')

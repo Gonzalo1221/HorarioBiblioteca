@@ -20,12 +20,10 @@ def create_roles():
     if RolesUsuarios.query.count() == 0:
         #Crear registro de roles
         rolsecretaria = RolesUsuarios('Administrador')
-        rolodontologo = RolesUsuarios('Secretaria')
-        rolpaciente = RolesUsuarios('Bienestar')
+        rolodontologo = RolesUsuarios('Instructor')
         #Guardamos los registros
         db.session.add(rolsecretaria)
         db.session.add(rolodontologo)
-        db.session.add(rolpaciente)
         db.session.commit()
 
 with app.app_context():
