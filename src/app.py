@@ -7,8 +7,12 @@ from config.db import db, app, ma
 from api.user import routes_user
 from api.roles import routes_roles
 from api.reservacion import routes_reservacion
-#rutas
 
+#rutas
+from rutas.Login import routes_login
+
+#ubicacion rutas
+app.register_blueprint(routes_login, url_prefix="/fronted")
 
 #ubicacion del api 
 app.register_blueprint(routes_roles, url_prefix="/api")

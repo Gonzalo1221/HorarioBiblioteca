@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static' , filename='css/login.css') }}"/>
+  <link rel="Shortcut Icon" href="{{url_for('static', filename='assets/img/sena_logo.png')}}">
+  <title>Validacion de datos</title>
+</head>
+
+<body>
+
+  <section>
+    <div class="container">
+      <form action="" id="loginForm">
+        <img class="img_icono" src="{{url_for('static', filename='assets/img/sena_logo.png')}}">              
+        <h2 class="letra">Valide Sus Datos</h2>
+        <div class="box">
+          <input type="email" id="email" class="input" id="textUsuario" placeholder=" " />
+          <label for="textUsuario" class="label"><Table>Correo</Table></label>
+        </div>
+
+        <div class="box">
+          <input type="password" id="password" class="input" id="textContra" placeholder=" " />
+          <label for="textContra" class="label">Contraseña</label>
+        </div>
+
+        <a href="" class="link">¿Olvidaste tu contraseña?</a>
+        <button class="btn1" type="button" onclick="login()">Ingresar</button>
+        <button class="btn2" type="button" onclick="registro()" >Crear Cuenta</button>
+      </form>
+    </div>
+  </section>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="{{url_for('static', filename='js/login.js')}}"></script>
+
+</body>
+</html>
